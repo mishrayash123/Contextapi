@@ -1,13 +1,11 @@
-import React from "react";
-import {FirstName} from "./App"
+import React, { useContext } from "react";
+import {FirstName,LastName} from "./App"
 
 const Componentc = () => {
+    const fname = useContext(FirstName);
+    const lname = useContext(LastName);
     return (<>
-        <FirstName.Consumer> {
-            (finame) => {
-                return <h1>My Name Is {finame}</h1>;
-            }
-        }</FirstName.Consumer>
+        <h1>My Name Is {fname}{lname}</h1>
     </>);
 };
 

@@ -3,6 +3,7 @@ import Componenta from "./Componenta";
 
 
 const FirstName = createContext();
+const LastName = createContext();
 
 
 
@@ -10,12 +11,14 @@ const FirstName = createContext();
 function App() {
     return(
       <>
-        <FirstName.Provider value={"Yash"}>
-        <Componenta/>
+        <FirstName.Provider value={"Yash Kumar"}>
+          <LastName.Provider value={" Mishra"}>
+          <Componenta/>
+          </LastName.Provider>
         </FirstName.Provider>
       </>
     );
 };
 
 export default App;
-export {FirstName};
+export {FirstName,LastName};
